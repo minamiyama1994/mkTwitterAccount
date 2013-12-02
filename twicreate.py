@@ -4,11 +4,6 @@ import config # Need this file!
 import requests # Need to install!
 import re
 
-screen_name = config.screen_name
-password = config.password
-mailAddress = config.mailAddress
-user_id = config.user_id
-
 ##################################
 #   Get Cookie and Session
 ##################################
