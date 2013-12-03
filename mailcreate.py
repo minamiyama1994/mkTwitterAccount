@@ -29,7 +29,7 @@ class twimail:
 		html = req.text
 
 		# 受信確認を行い、Twitterの確認メールへのリンクだけを取り出す
-		checkRegu = re.compile('http://15qm.com/\?act=mde&amp;mid=%3C.{20}%40spruce-goose.twitter.com%3E&amp;no=1&n=\d{4}')
+		checkRegu = re.compile('http://15qm.com/\?act=mde&amp;mid=%3C.{20}%40.{10,17}.twitter.com%3E&amp;no=1&n=\d{4}')
 		mailUrl = ""
 		match = checkRegu.search(html)
 		if match:
