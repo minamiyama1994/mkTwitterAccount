@@ -38,7 +38,7 @@ class mktwi:
 		url = 'https://twitter.com/account/create'
 		params ={'authenticity_token' : authKey, 'user[name]' : screen_name, 'user[email]' : mailAddress, 'user[user_password]' : password, 'user[screen_name]' : user_id, 'user[remember_me_on_signup]' : '0', 'user[use_cookie_personalization]' : '0', 'asked_cookie_personalization_setting' : '1', 'context' : '', 'ad_id' : '', 'ad_ref' : '', 'submit_button' : 'アカウントを作成する', 'user[discoverable_by_email]' : '1', 'user[send_email_newsletter]' : '1'}
 		self.cookie = {'cookie_Session' : cookie_Session, 'cookie_GuestID' : cookie_GuestID}
-		r = self.sess.post(url,cookies=cookie, params=params)
+		r = self.sess.post(url,cookies=self.cookie, params=params)
 		print r.cookies
 	
 	def conform(self, conformURL):
