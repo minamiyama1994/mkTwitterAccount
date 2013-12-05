@@ -53,7 +53,7 @@ class mktwi:
 		# Conform MailAddress
 		############################
 		r = self.sess.get(conformURL, cookies=self.cookie)
-		print r.text
+		#print r.text
 		print "Fin"
 		return
 	
