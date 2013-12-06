@@ -85,6 +85,7 @@ class mktwi:
 			authenticity_token = authenticity_token.strip('" />')
 			#print authenticity_token
 		else:
+			return 1
 			print "Not found Authenticity_Token"
 
 		# Oauth_Tokenを取り出す
@@ -98,6 +99,7 @@ class mktwi:
 		    #print oauth_token
 		else:
 		    print "Not found Oauth_Token"
+		    return 1
 
 		params = {'authenticity_token': authenticity_token, 'oauth_token': oauth_token, 'session[username_or_email]': self.user_id, 'session[password]': self.password, 'remember_me': 1}
 
@@ -118,7 +120,8 @@ class mktwi:
 			#print 'returnURL:%s' % returnURL
 		else:
 			print 'Not Found ReturnURL'
+			return 1
 
 		r = sess.get(returnURL, cookies = cookie)
 		#print r.text
-		return
+		return 0
