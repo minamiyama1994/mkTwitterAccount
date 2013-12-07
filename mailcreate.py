@@ -39,7 +39,7 @@ class twimail:
 			mailUrl = mailUrl.replace('%40', '@')
 			mailUrl = mailUrl.replace('%3E', '>')
 
-			print "MailUrl:%s" % mailUrl
+			#print "MailUrl:%s" % mailUrl
 		else:
 			print "Did not receive conform mail"
 			print html
