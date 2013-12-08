@@ -19,7 +19,7 @@ mailAddress = conformMail.mailAddress
 
 # user_id and user_name is same
 user_id = "".join([chr(random.randint(97,122)) for i in range(15)])
-password = "".join([chr(random.randint(97,122)) for i in range(25)])
+password = "".join([chr(random.randint(97,122)) for i in range(29)])
 print "user_id:%s" % user_id
 print "password:%s" % password
 mkTwitter = twicreate.mktwi(user_id, password, mailAddress, user_id)

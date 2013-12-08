@@ -85,8 +85,8 @@ class mktwi:
 			authenticity_token = authenticity_token.strip('" />')
 			#print authenticity_token
 		else:
-			return 1
 			print "Not found Authenticity_Token"
+			return 1
 
 		# Oauth_Tokenを取り出す
 		r = re.compile('<input id="oauth_token" name="oauth_token" type="hidden" value=".{40,45}" />')
